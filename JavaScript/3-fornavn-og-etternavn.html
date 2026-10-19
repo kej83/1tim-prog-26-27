@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fornavn og etternavn</h1>
+    <input id="inputFornavn" type="text" placeholder="Per">
+    <input id="inputEtternavn" type="text" placeholder="Askeladd">
+    <button onclick="giFulltNavn()">Gi fullt navn</button>
+
+    <script>
+        function giFulltNavn() {
+            let fornavn = inputFornavn.value;
+            let etternavn = inputEtternavn.value;
+
+            let fulltNavn = fornavn + " " + etternavn;
+
+            document.write("Ditt fulle navn er: " + fulltNavn)
+        }
+    </script>
+</body>
+</html>

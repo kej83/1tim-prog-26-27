@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="inpPassord" type="text" placeholder="Ditt hemmelige passord her">
+    <button onclick="sjekkPassord()">Logg inn</button>
+
+    <script>
+        function sjekkPassord() {
+            // 1. les inn passordet
+            let passord = inpPassord.value;
+            // 2. Kontroller mot det riktige passordet
+            if (passord == korrektPassord) {
+                document.write("Hurra! Du er logget inn!")
+            } else {
+                document.write("Feil passord.")
+            }
+            // 3. Gi tilbakemelding
+
+        }
+
+        let korrektPassord = "asdf1234";
+    </script>
+
+</body>
+</html>
