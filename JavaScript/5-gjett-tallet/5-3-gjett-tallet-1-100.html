@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Gjett tallet (1-100)</h1>
+    <input id="inpGjett" type="number" min="1" max="100">
+    <button onclick="gjett()">Gjett</button>
+    <p id="txtUt"></p>
+
+    <script>
+        // 1. Lag et tilfeldig tall 1-100
+        let fasit = Math.ceil(Math.random() * 100);
+
+        function gjett() {
+            // 2. Les inn brukerens svar
+            let gjett = Number(inpGjett.value);
+
+            // 3. Sjekk mot fasit
+            if (gjett == fasit) {
+                txtUt.textContent = "Du gjettet riktig! Hurra!";
+            }
+            // Hvis du gjettet lavere enn fasit.
+            else if (gjett < fasit) {
+                txtUt.textContent = "Du gjettet for lavt, prøv igjen!";
+            }
+            else if (gjett > fasit) {
+                txtUt.textContent = "Du gjettet for høyt, prøv igjen!";
+            }
+
+            // Oppgave 1: 
+            // a) Lag et nytt program som kaster en terning 1-6 og skriver ut hvor mange øyne det ble. 
+            // b) Skriv ut hurra hvis det ble sekser.
+            // c) Utvid til to terningkast, skriv nå hurra bare hvis det er to like, ellers skriv ut hva hver terning gav.
+        }
+    </script>
+
+</body>
+
+</html>

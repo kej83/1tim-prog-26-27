@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Terningkast</h1>
+    <button onclick="kastEnTerning()">Kast én terning</button>
+    <button onclick="kastToTerninger()">Kast to terninger</button>
+    <p id="txtUt"></p>
+    <script>
+        function kastToTerninger() {
+            let kast = Math.ceil(Math.random()*6);
+            let kast2 = Math.ceil(Math.random()*6);
+
+            // TODO: Skriv ut hva begge terningene viser.
+            // Sjekk så om de er like, og skriv deretter ut Hurra! i 
+            // tillegg
+        }
+
+        function kastEnTerning() {
+            let kast = Math.ceil(Math.random()*6);
+
+            if (kast == 6) {
+                txtUt.textContent = "Hurra! Du fikk en 6-er";
+            } else {
+                txtUt.textContent = `Du fikk en ${kast}-er.`;
+            }
+        }
+    
+    </script>
+</body>
+</html>
